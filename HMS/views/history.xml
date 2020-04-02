@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+        <record id="patient_history_tree_view" model="ir.ui.view">
+            <field name="name">history tree view</field>
+            <field name="model">hms.history</field>
+            <field name="arch" type="xml">
+            <tree>
+                <field name="patient_id"/>
+                <field name="description"/>
+                <field name="create_uid"/>
+                <field name="create_date"/>
+            </tree>
+            </field>
+        </record>
+        <record id="action_history" model="ir.actions.act_window">
+            <field name="name">History</field>
+            <field name="res_model">hms.history</field>
+        </record>
+        <menuitem id="hms_history_menu" name="History"
+        action="action_history" parent="hms_root_menu"/>
+    </data>
+</odoo>
